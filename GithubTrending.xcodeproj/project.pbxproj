@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C4233DFD2B94AC4B37B85A7 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142616CB7DB94EF1BD9FEAB1 /* libPods-test.a */; };
+		90CF49E2F5BCE82971DFFF57 /* TrendingListViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */; };
 		AE09B8B6180A1F85000CD552 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B5180A1F85000CD552 /* Foundation.framework */; };
 		AE09B8B8180A1F85000CD552 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B7180A1F85000CD552 /* CoreGraphics.framework */; };
 		AE09B8BA180A1F85000CD552 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B9180A1F85000CD552 /* UIKit.framework */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		142616CB7DB94EF1BD9FEAB1 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		735ACBE99BE8465BB606436B /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = "<group>"; };
+		90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingListViewControllerSpec.m; path = Controllers/TrendingListViewControllerSpec.m; sourceTree = "<group>"; };
 		AE09B8B2180A1F85000CD552 /* GithubTrending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubTrending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE09B8B5180A1F85000CD552 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AE09B8B7180A1F85000CD552 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90CF495460D458ED9FC6350C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		90CF4BF9F1E99FBA889C0275 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 			children = (
 				AE09B8D5180A1F85000CD552 /* Supporting Files */,
 				AE09B8EA180A4A6F000CD552 /* AppDelegateSpec.m */,
+				90CF495460D458ED9FC6350C /* Controllers */,
 			);
 			path = GithubTrendingTests;
 			sourceTree = "<group>";
@@ -218,7 +229,7 @@
 				ORGANIZATIONNAME = "Matt Darnall";
 				TargetAttributes = {
 					AE09B8CC180A1F85000CD552 = {
-						TestTargetID = AE09B8B1180A1F85000CD552;
+						TestTargetID = AE09B8B1180A1F85000CD552 /* GithubTrending */;
 					};
 				};
 			};
@@ -310,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE09B8EB180A4A6F000CD552 /* AppDelegateSpec.m in Sources */,
+				90CF49E2F5BCE82971DFFF57 /* TrendingListViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
