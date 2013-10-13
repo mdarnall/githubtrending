@@ -20,6 +20,8 @@
 		AE09B8D9180A1F85000CD552 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE09B8D7180A1F85000CD552 /* InfoPlist.strings */; };
 		AE09B8EB180A4A6F000CD552 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09B8EA180A4A6F000CD552 /* AppDelegateSpec.m */; };
 		AE09B8EE180A4E9B000CD552 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */; };
+		AE0F2D5D180B55C000137054 /* TrendingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0F2D5B180B55C000137054 /* TrendingListViewController.m */; };
+		AE0F2D5E180B55C000137054 /* TrendingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2D5C180B55C000137054 /* TrendingListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,9 @@
 		AE09B8EA180A4A6F000CD552 /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
 		AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		AE09B8EF180B4B89000CD552 /* GithubTrendingTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GithubTrendingTests-Prefix.pch"; sourceTree = "<group>"; };
+		AE0F2D5A180B55C000137054 /* TrendingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingListViewController.h; path = GithubTrending/controllers/TrendingListViewController.h; sourceTree = SOURCE_ROOT; };
+		AE0F2D5B180B55C000137054 /* TrendingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingListViewController.m; path = GithubTrending/controllers/TrendingListViewController.m; sourceTree = SOURCE_ROOT; };
+		AE0F2D5C180B55C000137054 /* TrendingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrendingListViewController.xib; path = GithubTrending/controllers/TrendingListViewController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90CF4BF9F1E99FBA889C0275 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE0F2D5A180B55C000137054 /* TrendingListViewController.h */,
+				AE0F2D5B180B55C000137054 /* TrendingListViewController.m */,
+				AE0F2D5C180B55C000137054 /* TrendingListViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		AE09B8A9180A1F85000CD552 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +133,7 @@
 				AE09B8C5180A1F85000CD552 /* GithubTrendingAppDelegate.m */,
 				AE09B8C7180A1F85000CD552 /* Images.xcassets */,
 				AE09B8BC180A1F85000CD552 /* Supporting Files */,
+				90CF4BF9F1E99FBA889C0275 /* Controllers */,
 			);
 			path = GithubTrending;
 			sourceTree = "<group>";
@@ -202,7 +218,7 @@
 				ORGANIZATIONNAME = "Matt Darnall";
 				TargetAttributes = {
 					AE09B8CC180A1F85000CD552 = {
-						TestTargetID = AE09B8B1180A1F85000CD552 /* GithubTrending */;
+						TestTargetID = AE09B8B1180A1F85000CD552;
 					};
 				};
 			};
@@ -229,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0F2D5E180B55C000137054 /* TrendingListViewController.xib in Resources */,
 				AE09B8C0180A1F85000CD552 /* InfoPlist.strings in Resources */,
 				AE09B8C8180A1F85000CD552 /* Images.xcassets in Resources */,
 			);
@@ -283,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE09B8C6180A1F85000CD552 /* GithubTrendingAppDelegate.m in Sources */,
+				AE0F2D5D180B55C000137054 /* TrendingListViewController.m in Sources */,
 				AE09B8C2180A1F85000CD552 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

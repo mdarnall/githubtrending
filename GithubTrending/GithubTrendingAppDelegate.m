@@ -7,6 +7,7 @@
 //
 
 #import "GithubTrendingAppDelegate.h"
+#import "TrendingListViewController.h"
 
 @implementation GithubTrendingAppDelegate
 
@@ -15,6 +16,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[TrendingListViewController alloc] init];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

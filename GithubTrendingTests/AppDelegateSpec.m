@@ -7,8 +7,9 @@
 //
 
 #import "GithubTrendingAppDelegate.h"
+#import "TrendingListViewController.h"
 
-SpecBegin(AppDelegate)
+    SpecBegin(AppDelegate)
 
 describe(@"AppDelegate", ^{
 
@@ -30,7 +31,7 @@ describe(@"AppDelegate", ^{
 
         it(@"should set the root view controller", ^{
             expect(appDelegate.window.rootViewController).toNot.beNil();
-            expect(appDelegate.window.rootViewController).to.beKindOf([])
+            expect(appDelegate.window.rootViewController).to.beKindOf([TrendingListViewController class]);
         });
 
         
