@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Matt Darnall. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "GithubTrendingAppDelegate.h"
 
-@implementation AppDelegate
+@implementation GithubTrendingAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

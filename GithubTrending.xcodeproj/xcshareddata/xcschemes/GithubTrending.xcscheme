@@ -33,18 +33,10 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE09B8CC180A1F85000CD552"
-               BuildableName = "GithubTrendingTests.xctest"
+               BuildableName = "GithubTrendingTests.octest"
                BlueprintName = "GithubTrendingTests"
                ReferencedContainer = "container:GithubTrending.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "GithubTrendingTests/testExample">
-               </Test>
-               <Test
-                  Identifier = "GithubTrendingTests">
-               </Test>
-            </SkippedTests>
             <LocationScenarioReference
                identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
                referenceType = "1">
