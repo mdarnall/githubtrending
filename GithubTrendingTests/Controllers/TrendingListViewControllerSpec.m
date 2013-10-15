@@ -5,6 +5,7 @@
 
 
 #import "TrendingListViewController.h"
+#import "TrendingTableViewDataSource.h"
 
 SpecBegin(TrendingListViewController)
 
@@ -22,12 +23,16 @@ SpecBegin(TrendingListViewController)
 
         describe(@"viewDidLoad", ^{
 
+            beforeEach(^{
+                [controller viewDidLoad];
+            });
+
             it(@"has a view outlet", ^{
                 expect(controller.view).toNot.beNil();
             });
 
-            it(@"sets the table view delegate", ^{
-                expect(controller.tableView.delegate).to.beKindOf([TrendingTableViewDataSource class]);
+            it(@"sets up the table view data source", ^{
+                expect(controller.tableView.dataSource).to.beKindOf([TrendingTableViewDataSource class]);
             });
 
 

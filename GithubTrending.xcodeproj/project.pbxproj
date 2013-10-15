@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C4233DFD2B94AC4B37B85A7 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142616CB7DB94EF1BD9FEAB1 /* libPods-test.a */; };
 		90CF49E2F5BCE82971DFFF57 /* TrendingListViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */; };
+		90CF4D5BECB070C5EE8F07A3 /* TrendingTableViewDataSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF411B071FA56F2DCD3E4E /* TrendingTableViewDataSourceSpec.m */; };
 		AE09B8B6180A1F85000CD552 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B5180A1F85000CD552 /* Foundation.framework */; };
 		AE09B8B8180A1F85000CD552 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B7180A1F85000CD552 /* CoreGraphics.framework */; };
 		AE09B8BA180A1F85000CD552 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B9180A1F85000CD552 /* UIKit.framework */; };
@@ -23,6 +24,7 @@
 		AE09B8EE180A4E9B000CD552 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */; };
 		AE0F2D5D180B55C000137054 /* TrendingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0F2D5B180B55C000137054 /* TrendingListViewController.m */; };
 		AE0F2D5E180B55C000137054 /* TrendingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2D5C180B55C000137054 /* TrendingListViewController.xib */; };
+		AE922BC2180B673100CA66FD /* TrendingTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE922BC1180B673100CA66FD /* TrendingTableViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 		142616CB7DB94EF1BD9FEAB1 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		735ACBE99BE8465BB606436B /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = "<group>"; };
 		90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingListViewControllerSpec.m; path = Controllers/TrendingListViewControllerSpec.m; sourceTree = "<group>"; };
+		90CF411B071FA56F2DCD3E4E /* TrendingTableViewDataSourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingTableViewDataSourceSpec.m; path = Controllers/TrendingTableViewDataSourceSpec.m; sourceTree = "<group>"; };
 		AE09B8B2180A1F85000CD552 /* GithubTrending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubTrending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE09B8B5180A1F85000CD552 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AE09B8B7180A1F85000CD552 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,6 +62,8 @@
 		AE0F2D5A180B55C000137054 /* TrendingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingListViewController.h; path = GithubTrending/controllers/TrendingListViewController.h; sourceTree = SOURCE_ROOT; };
 		AE0F2D5B180B55C000137054 /* TrendingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingListViewController.m; path = GithubTrending/controllers/TrendingListViewController.m; sourceTree = SOURCE_ROOT; };
 		AE0F2D5C180B55C000137054 /* TrendingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrendingListViewController.xib; path = GithubTrending/controllers/TrendingListViewController.xib; sourceTree = SOURCE_ROOT; };
+		AE922BC0180B673100CA66FD /* TrendingTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingTableViewDataSource.h; path = GithubTrending/controllers/TrendingTableViewDataSource.h; sourceTree = SOURCE_ROOT; };
+		AE922BC1180B673100CA66FD /* TrendingTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingTableViewDataSource.m; path = GithubTrending/controllers/TrendingTableViewDataSource.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */,
+				90CF411B071FA56F2DCD3E4E /* TrendingTableViewDataSourceSpec.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +106,8 @@
 				AE0F2D5A180B55C000137054 /* TrendingListViewController.h */,
 				AE0F2D5B180B55C000137054 /* TrendingListViewController.m */,
 				AE0F2D5C180B55C000137054 /* TrendingListViewController.xib */,
+				AE922BC0180B673100CA66FD /* TrendingTableViewDataSource.h */,
+				AE922BC1180B673100CA66FD /* TrendingTableViewDataSource.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,11 +147,11 @@
 		AE09B8BB180A1F85000CD552 /* GithubTrending */ = {
 			isa = PBXGroup;
 			children = (
+				90CF4BF9F1E99FBA889C0275 /* Controllers */,
 				AE09B8C4180A1F85000CD552 /* GithubTrendingAppDelegate.h */,
 				AE09B8C5180A1F85000CD552 /* GithubTrendingAppDelegate.m */,
 				AE09B8C7180A1F85000CD552 /* Images.xcassets */,
 				AE09B8BC180A1F85000CD552 /* Supporting Files */,
-				90CF4BF9F1E99FBA889C0275 /* Controllers */,
 			);
 			path = GithubTrending;
 			sourceTree = "<group>";
@@ -311,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE09B8C6180A1F85000CD552 /* GithubTrendingAppDelegate.m in Sources */,
+				AE922BC2180B673100CA66FD /* TrendingTableViewDataSource.m in Sources */,
 				AE0F2D5D180B55C000137054 /* TrendingListViewController.m in Sources */,
 				AE09B8C2180A1F85000CD552 /* main.m in Sources */,
 			);
@@ -322,6 +331,7 @@
 			files = (
 				AE09B8EB180A4A6F000CD552 /* AppDelegateSpec.m in Sources */,
 				90CF49E2F5BCE82971DFFF57 /* TrendingListViewControllerSpec.m in Sources */,
+				90CF4D5BECB070C5EE8F07A3 /* TrendingTableViewDataSourceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
