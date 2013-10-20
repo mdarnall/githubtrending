@@ -31,9 +31,12 @@
     return self;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.tableView.dataSource = self.dataSource;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -70,12 +73,13 @@
 
 }
 
+
+
 - (TrendingTableViewDataSource *)dataSource {
-    if (_dataSource == nil) {
-        _dataSource = [[TrendingTableViewDataSource alloc] init];
+    if(_dataSource == nil){
+        _dataSource = [[TrendingTableViewDataSource alloc]init];
+        _dataSource.repositories = self.model;
     }
     return _dataSource;
 }
-
-
 @end

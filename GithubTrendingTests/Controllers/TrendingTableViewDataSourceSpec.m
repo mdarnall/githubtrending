@@ -19,7 +19,8 @@ SpecBegin(TrendingTableViewDataSource)
             beforeEach(^{
                 TrendingRepositories *repositories = [[TrendingRepositories alloc] init];
                 repositories.items = @[@"", @"", @""];
-                dataSource = [[TrendingTableViewDataSource alloc] initWithRepositories:repositories];
+                dataSource = [[TrendingTableViewDataSource alloc] init];
+                dataSource.repositories = repositories;
             });
 
             it(@"should conform to the UITableViewDataSource", ^{

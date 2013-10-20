@@ -33,9 +33,17 @@ SpecBegin(TrendingListViewController)
                 expect(controller.tableView).toNot.beNil();
             });
 
-            it(@"sets up the table view data source", ^{
-                [controller view];
-                expect(controller.tableView.dataSource).to.beKindOf([TrendingTableViewDataSource class]);
+            describe(@"tableView dataSource", ^{
+                it(@"sets up the table view data source", ^{
+                    [controller view];
+                    expect(controller.tableView.dataSource).to.beKindOf([TrendingTableViewDataSource class]);
+                });
+
+                it(@"sets up the datasource with it's model", ^{
+                    [controller view];
+                    TrendingTableViewDataSource *dataSource = (TrendingTableViewDataSource *) controller.tableView.dataSource;
+                    expect(dataSource.repositories).toNot.beNil();
+                });
             });
 
         });
