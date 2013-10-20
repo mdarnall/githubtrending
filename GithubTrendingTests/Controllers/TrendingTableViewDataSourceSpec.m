@@ -6,6 +6,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TrendingTableViewDataSource.h"
+#import "TrendingRepositories.h"
 
 SpecBegin(TrendingTableViewDataSource)
 
@@ -13,31 +14,24 @@ SpecBegin(TrendingTableViewDataSource)
 
         __block TrendingTableViewDataSource *dataSource;
 
-        beforeAll(^{
-        });
-
-        beforeEach(^{
-            dataSource = [[TrendingTableViewDataSource alloc] init];
-        });
-
-
-        it(@"should conform to the UITableViewDataSource", ^{
-            expect([dataSource conformsToProtocol:@protocol(UITableViewDataSource)]).to.beTruthy();
-        });
-
         describe(@"UITableViewDataSource", ^{
             
             beforeEach(^{
-                
+                TrendingRepositories *repositories = [[TrendingRepositories alloc] init];
+                repositories.items = @[@"", @"", @""];
+                dataSource = [[TrendingTableViewDataSource alloc] initWithRepositories:repositories];
             });
 
-            it(@"should return the number of sections", ^{
+            it(@"should conform to the UITableViewDataSource", ^{
+                expect([dataSource conformsToProtocol:@protocol(UITableViewDataSource)]).to.beTruthy();
+            });
+
+            it(@"should return one table section", ^{
                 expect([dataSource numberOfSectionsInTableView:nil]).to.equal(1);
             });
 
-            it(@"should return the number of rows", ^{
-
-                expect([dataSource tableView:nil numberOfRowsInSection:1]).to.equal(3);
+            it(@"should return the number of rows based on the item count in the model", ^{
+                expect([dataSource tableView:nil numberOfRowsInSection:0]).to.equal(3);
             });
         });
 

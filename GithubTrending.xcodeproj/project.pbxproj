@@ -56,6 +56,9 @@
 		90CF46B956FE13EE24D8C068 /* GithubSearchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubSearchClient.h; sourceTree = "<group>"; };
 		90CF4874E8EEC42B57F5BB9B /* OHHTTPStubs+GithubAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs+GithubAPI.m"; sourceTree = "<group>"; };
 		90CF4A7574AC87221B22E4BA /* GithubSearchClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GithubSearchClientSpec.m; path = GithubClient/GithubSearchClientSpec.m; sourceTree = "<group>"; };
+		90CF4B492807656784C131E7 /* TrendingRepositories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingRepositories.h; path = models/TrendingRepositories.h; sourceTree = "<group>"; };
+		90CF4C40788484273D7025D4 /* TrendingRepositories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingRepositories.m; path = models/TrendingRepositories.m; sourceTree = "<group>"; };
+		90CF4CB7A9B3CBCFE6FD549D /* TrendingRepositoriesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingRepositoriesSpec.m; path = Models/TrendingRepositoriesSpec.m; sourceTree = "<group>"; };
 		AE09B8B2180A1F85000CD552 /* GithubTrending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubTrending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE09B8B5180A1F85000CD552 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AE09B8B7180A1F85000CD552 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,15 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		90CF4AA2B7F29C53C8F49C6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90CF4B492807656784C131E7 /* TrendingRepositories.h */,
+				90CF4C40788484273D7025D4 /* TrendingRepositories.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		90CF4BF9F1E99FBA889C0275 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +138,14 @@
 				AE922BC1180B673100CA66FD /* TrendingTableViewDataSource.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		90CF4E379671A1B5DFC6F1C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90CF4CB7A9B3CBCFE6FD549D /* TrendingRepositoriesSpec.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		90CF4E5C73BDBCEC042CC187 /* GithubClient */ = {
@@ -190,6 +210,7 @@
 				AE09B8C7180A1F85000CD552 /* Images.xcassets */,
 				AE09B8BC180A1F85000CD552 /* Supporting Files */,
 				90CF4E5C73BDBCEC042CC187 /* GithubClient */,
+				90CF4AA2B7F29C53C8F49C6A /* Models */,
 			);
 			path = GithubTrending;
 			sourceTree = "<group>";
@@ -213,6 +234,7 @@
 				AE09B8EA180A4A6F000CD552 /* AppDelegateSpec.m */,
 				90CF495460D458ED9FC6350C /* Controllers */,
 				90CF4FCA4BCB6C4C28AB9F59 /* GithubClient */,
+				90CF4E379671A1B5DFC6F1C7 /* Models */,
 			);
 			path = GithubTrendingTests;
 			sourceTree = "<group>";
@@ -404,6 +426,7 @@
 				AE0F2D5D180B55C000137054 /* TrendingListViewController.m in Sources */,
 				AE09B8C2180A1F85000CD552 /* main.m in Sources */,
 				90CF4452857929314C527603 /* GithubSearchClient.m in Sources */,
+				90CF40ED761D600608285A14 /* TrendingRepositories.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

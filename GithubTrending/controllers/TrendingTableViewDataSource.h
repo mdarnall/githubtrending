@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class GithubSearchClient;
+@class TrendingRepositories;
+
 @interface TrendingTableViewDataSource : NSObject <UITableViewDataSource>
 
+@property (weak, nonatomic) UITableView *tableView;
+
+- (TrendingTableViewDataSource *)initWithRepositories:(TrendingRepositories *)repositories;
 @end

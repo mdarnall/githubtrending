@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class GithubSearchClient;
+@class TrendingRepositories;
+
 @interface TrendingListViewController : UITableViewController
 
+
+- (id)initWithModel:(TrendingRepositories *)model apiClient:(GithubSearchClient *)apiClient;
 @end
