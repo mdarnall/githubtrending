@@ -24,7 +24,7 @@
 
 - (void)getTrendingRepositories:(void (^)(NSArray *, NSError *))completedBlock {
 
-    //H "Accept: application/vnd.github.preview"
+
     [self.requestSerializer setValue:@"application/vnd.github.preview" forHTTPHeaderField:@"Accept"];
 
     [self
