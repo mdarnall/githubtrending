@@ -34,6 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Trending Repositories";
 
     self.tableView.dataSource = self.dataSource;
 

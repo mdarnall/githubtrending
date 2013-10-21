@@ -16,8 +16,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[TrendingListViewController alloc] init];
-    
+    TrendingListViewController *listViewController = [[TrendingListViewController alloc] init];
+    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController: listViewController];
+    navigationController.title = @"Trending Repositories";
+
+    self.window.rootViewController = navigationController;
+
     [self.window makeKeyAndVisible];
     return YES;
 }
