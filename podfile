@@ -1,6 +1,7 @@
 platform :ios, '6.0'
 
 pod "AFNetworking", "~> 2.0"
+pod 'REMenu', '~> 1.5.1'
 
 target :test do
   link_with 'GithubTrendingTests'

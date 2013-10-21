@@ -2,6 +2,7 @@
 #import "TrendingTableViewDataSource.h"
 #import "GithubSearchClient.h"
 #import "TrendingRepositories.h"
+#import "REMenu.h"
 
 @interface TrendingListViewController ()
 
@@ -34,9 +35,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.title = @"Trending Repositories";
 
     self.tableView.dataSource = self.dataSource;
+
+}
+
+- (void)createMenu {
+
+//    self.menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, activityItem, profileItem]];
+//    [self.menu showFromNavigationController:self.navigationController];
 
 }
 
