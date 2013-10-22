@@ -28,8 +28,8 @@
 		AE09B8D9180A1F85000CD552 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE09B8D7180A1F85000CD552 /* InfoPlist.strings */; };
 		AE09B8EB180A4A6F000CD552 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09B8EA180A4A6F000CD552 /* AppDelegateSpec.m */; };
 		AE09B8EE180A4E9B000CD552 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */; };
-		AE0F2D5D180B55C000137054 /* TrendingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0F2D5B180B55C000137054 /* TrendingListViewController.m */; };
-		AE0F2D5E180B55C000137054 /* TrendingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2D5C180B55C000137054 /* TrendingListViewController.xib */; };
+		AE0F2D5D180B55C000137054 /* TrendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0F2D5B180B55C000137054 /* TrendingTableViewController.m */; };
+		AE0F2D5E180B55C000137054 /* TrendingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2D5C180B55C000137054 /* TrendingTableViewController.xib */; };
 		AE922BC2180B673100CA66FD /* TrendingTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE922BC1180B673100CA66FD /* TrendingTableViewDataSource.m */; };
 		AEC4E3A6180F0BAC00F8EFC7 /* search_response.json in Resources */ = {isa = PBXBuildFile; fileRef = AEC4E3A5180F0BAC00F8EFC7 /* search_response.json */; };
 /* End PBXBuildFile section */
@@ -76,9 +76,9 @@
 		AE09B8EA180A4A6F000CD552 /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
 		AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		AE09B8EF180B4B89000CD552 /* GithubTrendingTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GithubTrendingTests-Prefix.pch"; sourceTree = "<group>"; };
-		AE0F2D5A180B55C000137054 /* TrendingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingListViewController.h; path = GithubTrending/controllers/TrendingListViewController.h; sourceTree = SOURCE_ROOT; };
-		AE0F2D5B180B55C000137054 /* TrendingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingListViewController.m; path = GithubTrending/controllers/TrendingListViewController.m; sourceTree = SOURCE_ROOT; };
-		AE0F2D5C180B55C000137054 /* TrendingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrendingListViewController.xib; path = GithubTrending/controllers/TrendingListViewController.xib; sourceTree = SOURCE_ROOT; };
+		AE0F2D5A180B55C000137054 /* TrendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingTableViewController.h; path = GithubTrending/controllers/TrendingTableViewController.h; sourceTree = SOURCE_ROOT; };
+		AE0F2D5B180B55C000137054 /* TrendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingTableViewController.m; path = GithubTrending/controllers/TrendingTableViewController.m; sourceTree = SOURCE_ROOT; };
+		AE0F2D5C180B55C000137054 /* TrendingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrendingTableViewController.xib; path = GithubTrending/controllers/TrendingTableViewController.xib; sourceTree = SOURCE_ROOT; };
 		AE922BC0180B673100CA66FD /* TrendingTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingTableViewDataSource.h; path = GithubTrending/controllers/TrendingTableViewDataSource.h; sourceTree = SOURCE_ROOT; };
 		AE922BC1180B673100CA66FD /* TrendingTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingTableViewDataSource.m; path = GithubTrending/controllers/TrendingTableViewDataSource.m; sourceTree = SOURCE_ROOT; };
 		AEC4E3A5180F0BAC00F8EFC7 /* search_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = search_response.json; path = Resources/search_response.json; sourceTree = "<group>"; };
@@ -131,9 +131,9 @@
 		90CF4BF9F1E99FBA889C0275 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AE0F2D5A180B55C000137054 /* TrendingListViewController.h */,
-				AE0F2D5B180B55C000137054 /* TrendingListViewController.m */,
-				AE0F2D5C180B55C000137054 /* TrendingListViewController.xib */,
+				AE0F2D5A180B55C000137054 /* TrendingTableViewController.h */,
+				AE0F2D5B180B55C000137054 /* TrendingTableViewController.m */,
+				AE0F2D5C180B55C000137054 /* TrendingTableViewController.xib */,
 				AE922BC0180B673100CA66FD /* TrendingTableViewDataSource.h */,
 				AE922BC1180B673100CA66FD /* TrendingTableViewDataSource.m */,
 			);
@@ -204,10 +204,10 @@
 		AE09B8BB180A1F85000CD552 /* GithubTrending */ = {
 			isa = PBXGroup;
 			children = (
-				90CF4BF9F1E99FBA889C0275 /* Controllers */,
 				AE09B8C4180A1F85000CD552 /* GithubTrendingAppDelegate.h */,
 				AE09B8C5180A1F85000CD552 /* GithubTrendingAppDelegate.m */,
 				AE09B8C7180A1F85000CD552 /* Images.xcassets */,
+				90CF4BF9F1E99FBA889C0275 /* Controllers */,
 				AE09B8BC180A1F85000CD552 /* Supporting Files */,
 				90CF4E5C73BDBCEC042CC187 /* GithubClient */,
 				90CF4AA2B7F29C53C8F49C6A /* Models */,
@@ -309,7 +309,7 @@
 				ORGANIZATIONNAME = "Matt Darnall";
 				TargetAttributes = {
 					AE09B8CC180A1F85000CD552 = {
-						TestTargetID = AE09B8B1180A1F85000CD552 /* GithubTrending */;
+						TestTargetID = AE09B8B1180A1F85000CD552;
 					};
 				};
 			};
@@ -336,7 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE0F2D5E180B55C000137054 /* TrendingListViewController.xib in Resources */,
+				AE0F2D5E180B55C000137054 /* TrendingTableViewController.xib in Resources */,
 				AE09B8C0180A1F85000CD552 /* InfoPlist.strings in Resources */,
 				AE09B8C8180A1F85000CD552 /* Images.xcassets in Resources */,
 			);
@@ -423,7 +423,7 @@
 			files = (
 				AE09B8C6180A1F85000CD552 /* GithubTrendingAppDelegate.m in Sources */,
 				AE922BC2180B673100CA66FD /* TrendingTableViewDataSource.m in Sources */,
-				AE0F2D5D180B55C000137054 /* TrendingListViewController.m in Sources */,
+				AE0F2D5D180B55C000137054 /* TrendingTableViewController.m in Sources */,
 				AE09B8C2180A1F85000CD552 /* main.m in Sources */,
 				90CF4452857929314C527603 /* GithubSearchClient.m in Sources */,
 				90CF40ED761D600608285A14 /* TrendingRepositories.m in Sources */,
@@ -558,6 +558,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GithubTrending/GithubTrending-Prefix.pch";
 				INFOPLIST_FILE = "GithubTrending/GithubTrending-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
@@ -577,6 +578,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GithubTrending/GithubTrending-Prefix.pch";
 				INFOPLIST_FILE = "GithubTrending/GithubTrending-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;

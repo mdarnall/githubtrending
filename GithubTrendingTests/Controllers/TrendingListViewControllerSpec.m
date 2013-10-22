@@ -1,15 +1,15 @@
 #import <OCMock/OCMockObject.h>
 #import <OCMock/OCMArg.h>
-#import "TrendingListViewController.h"
+#import "TrendingTableViewController.h"
 #import "TrendingTableViewDataSource.h"
 #import "TrendingRepositories.h"
 #import "GithubSearchClient.h"
 
 SpecBegin(TrendingListViewController)
 
-    describe(@"TrendingListViewController", ^{
+    describe(@"TrendingTableViewController", ^{
 
-        __block TrendingListViewController *controller;
+        __block TrendingTableViewController *controller;
         __block TrendingRepositories *model;
         __block id apiClient;
 
@@ -17,7 +17,7 @@ SpecBegin(TrendingListViewController)
         beforeEach(^{
             model = [[TrendingRepositories alloc] init];
             apiClient = [OCMockObject niceMockForClass:[GithubSearchClient class]];
-            controller = [[TrendingListViewController alloc]initWithModel:model apiClient:apiClient];
+            controller = [[TrendingTableViewController alloc]initWithModel:model apiClient:apiClient];
 
         });
 

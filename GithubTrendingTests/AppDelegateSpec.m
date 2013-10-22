@@ -1,6 +1,6 @@
 
 #import "GithubTrendingAppDelegate.h"
-#import "TrendingListViewController.h"
+#import "TrendingTableViewController.h"
 
 SpecBegin(AppDelegate)
 

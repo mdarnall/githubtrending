@@ -1,9 +1,9 @@
-#import "TrendingListViewController.h"
+#import "TrendingTableViewController.h"
 #import "TrendingTableViewDataSource.h"
 #import "GithubSearchClient.h"
 #import "TrendingRepositories.h"
 
-@interface TrendingListViewController ()
+@interface TrendingTableViewController ()
 
 @property(strong, nonatomic) TrendingTableViewDataSource *dataSource;
 @property(strong, nonatomic) GithubSearchClient *apiClient;
@@ -11,7 +11,7 @@
 
 @end
 
-@implementation TrendingListViewController
+@implementation TrendingTableViewController
 
 - (id)init {
     TrendingRepositories *model = [[TrendingRepositories alloc] init];
@@ -30,7 +30,6 @@
     }
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -66,15 +65,12 @@
 
 }
 
-
 - (void)onTrendingRepositoriesChanged {
 
     NSLog(@"Model state: %@", self.model.items);
     [self.tableView reloadData];
 
 }
-
-
 
 - (TrendingTableViewDataSource *)dataSource {
     if(_dataSource == nil){
@@ -83,4 +79,5 @@
     }
     return _dataSource;
 }
+
 @end

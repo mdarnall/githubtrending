@@ -7,7 +7,7 @@
 //
 
 #import "GithubTrendingAppDelegate.h"
-#import "TrendingListViewController.h"
+#import "TrendingTableViewController.h"
 
 @implementation GithubTrendingAppDelegate
 
@@ -16,7 +16,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    TrendingListViewController *listViewController = [[TrendingListViewController alloc] init];
+    TrendingTableViewController *listViewController = [[TrendingTableViewController alloc] init];
     UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController: listViewController];
     navigationController.title = @"Trending Repositories";
 
