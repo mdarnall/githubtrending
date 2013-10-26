@@ -47,7 +47,7 @@ SpecBegin(TrendingListViewController)
                 it(@"sets up the datasource with it's model", ^{
                     [controller view];
                     TrendingTableViewDataSource *dataSource = (TrendingTableViewDataSource *) controller.tableView.dataSource;
-                    expect(dataSource.repositories).toNot.beNil();
+                    expect(dataSource.repositories).to.equal(model);
                 });
             });
 
