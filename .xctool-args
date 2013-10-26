@@ -1,0 +1,5 @@
+[
+  "-scheme", "GithubTrending", 
+  "-workspace", "GithubTrending.xcworkspace", 
+  "-sdk", "iphonesimulator"
+]
