@@ -32,6 +32,11 @@ SpecBegin(TrendingListViewController)
                 [controller view];
                 expect(controller.tableView).toNot.beNil();
             });
+            
+            it(@"has a title", ^{
+                [controller view];
+                expect(controller.title).to.equal(@"Trending Repositories");
+            });
 
             describe(@"tableView dataSource", ^{
                 it(@"sets up the table view data source", ^{
