@@ -1,0 +1,13 @@
+platform :ios, '6.0'
+
+pod "AFNetworking", "~> 2.0"
+
+target :test do
+  link_with 'GithubTrendingTests'
+
+  pod 'Specta', '~> 0.1'
+  pod 'Expecta', '~> 0.2'
+  pod 'OCMock', '~> 2.2'
+  pod 'OHHTTPStubs', '~> 3.0'
+
+end
