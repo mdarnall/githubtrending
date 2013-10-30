@@ -13,6 +13,7 @@
 		90CF40ED761D600608285A14 /* TrendingRepositories.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF4C40788484273D7025D4 /* TrendingRepositories.m */; };
 		90CF4452857929314C527603 /* GithubSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF4276E6C26529017E5E18 /* GithubSearchClient.m */; };
 		90CF48BD4C0849CD0183A954 /* TrendingRepositoriesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF4CB7A9B3CBCFE6FD549D /* TrendingRepositoriesSpec.m */; };
+		90CF49533906A972C06366F2 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 90CF4FE686D931E865716743 /* podfile */; };
 		90CF49E2F5BCE82971DFFF57 /* TrendingListViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */; };
 		90CF4D5BECB070C5EE8F07A3 /* TrendingTableViewDataSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF411B071FA56F2DCD3E4E /* TrendingTableViewDataSourceSpec.m */; };
 		90CF4DFBD12ADB0C18177111 /* GithubSearchClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF4A7574AC87221B22E4BA /* GithubSearchClientSpec.m */; };
@@ -59,6 +60,7 @@
 		90CF4B492807656784C131E7 /* TrendingRepositories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingRepositories.h; path = models/TrendingRepositories.h; sourceTree = "<group>"; };
 		90CF4C40788484273D7025D4 /* TrendingRepositories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingRepositories.m; path = models/TrendingRepositories.m; sourceTree = "<group>"; };
 		90CF4CB7A9B3CBCFE6FD549D /* TrendingRepositoriesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingRepositoriesSpec.m; path = Models/TrendingRepositoriesSpec.m; sourceTree = "<group>"; };
+		90CF4FE686D931E865716743 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
 		AE09B8B2180A1F85000CD552 /* GithubTrending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubTrending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE09B8B5180A1F85000CD552 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AE09B8B7180A1F85000CD552 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,6 +178,7 @@
 				AE09B8B3180A1F85000CD552 /* Products */,
 				735ACBE99BE8465BB606436B /* Pods-test.xcconfig */,
 				1C170278D8CE405F9CC265A1 /* Pods.xcconfig */,
+				90CF4FE686D931E865716743 /* podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -339,6 +342,7 @@
 				AE0F2D5E180B55C000137054 /* TrendingTableViewController.xib in Resources */,
 				AE09B8C0180A1F85000CD552 /* InfoPlist.strings in Resources */,
 				AE09B8C8180A1F85000CD552 /* Images.xcassets in Resources */,
+				90CF49533906A972C06366F2 /* podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
