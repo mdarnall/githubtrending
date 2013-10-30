@@ -1,3 +1,4 @@
+#import <REMenu/REMenu.h>
 #import "TrendingTableViewController.h"
 #import "TrendingTableViewDataSource.h"
 #import "GithubSearchClient.h"
@@ -34,6 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self createMenu];
 
     self.title = @"Trending Repositories";
 
@@ -43,8 +45,45 @@
 
 - (void)createMenu {
 
-//    self.menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, activityItem, profileItem]];
-//    [self.menu showFromNavigationController:self.navigationController];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
+                                                                             style:UIBarButtonItemStyleBordered
+                                                                            target:self
+                                                                            action:@selector(toggleMenu)];
+
+    REMenuItem *todayItem = [[REMenuItem alloc] initWithTitle:@"Today"
+                                                    subtitle:nil
+                                                       image:nil
+                                            highlightedImage:nil
+                                                      action:^(REMenuItem *item) {
+                                                          NSLog(@"Item: %@", item);
+                                                      }];
+
+    REMenuItem *thisWeek = [[REMenuItem alloc] initWithTitle:@"This Week"
+                                                     subtitle:nil
+                                                        image:nil
+                                             highlightedImage:nil
+                                                       action:^(REMenuItem *item) {
+                                                           NSLog(@"Item: %@", item);
+                                                       }];
+
+    REMenuItem *thisMonth = [[REMenuItem alloc] initWithTitle:@"This Month"
+                                                     subtitle:nil
+                                                        image:nil
+                                             highlightedImage:nil
+                                                       action:^(REMenuItem *item) {
+                                                           NSLog(@"Item: %@", item);
+                                                       }];
+
+
+    self.menu = [[REMenu alloc] initWithItems:@[todayItem, thisWeek, thisMonth]];
+
+}
+
+- (void)toggleMenu {
+    if (self.menu.isOpen)
+        return [self.menu close];
+
+    [self.menu showFromNavigationController:self.navigationController];
 
 }
 

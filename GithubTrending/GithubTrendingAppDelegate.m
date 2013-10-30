@@ -18,7 +18,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     TrendingTableViewController *listViewController = [[TrendingTableViewController alloc] init];
     UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController: listViewController];
-    navigationController.title = @"Trending Repositories";
 
     self.window.rootViewController = navigationController;
 

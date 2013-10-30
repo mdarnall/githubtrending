@@ -10,6 +10,7 @@ SpecBegin(TrendingListViewController)
     describe(@"TrendingTableViewController", ^{
 
         __block TrendingTableViewController *controller;
+        __block UINavigationController *navigationController;
         __block TrendingRepositories *model;
         __block id apiClient;
 
@@ -18,7 +19,7 @@ SpecBegin(TrendingListViewController)
             model = [[TrendingRepositories alloc] init];
             apiClient = [OCMockObject niceMockForClass:[GithubSearchClient class]];
             controller = [[TrendingTableViewController alloc]initWithModel:model apiClient:apiClient];
-
+            navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
         });
 
         describe(@"view", ^{
@@ -31,6 +32,18 @@ SpecBegin(TrendingListViewController)
             it(@"has a tableview outlet", ^{
                 [controller view];
                 expect(controller.tableView).toNot.beNil();
+            });
+
+            it(@"has a menu outlet", ^{
+                [controller view] ;
+                expect(controller.menu).toNot.beNil();
+            });
+
+            it(@"has a action for the navigation left bar button", ^{
+                [controller view];
+                UIBarButtonItem *leftButton = controller.navigationItem.leftBarButtonItem;
+                expect([leftButton action]).to.equal(@selector(toggleMenu));               
+
             });
             
             it(@"has a title", ^{
