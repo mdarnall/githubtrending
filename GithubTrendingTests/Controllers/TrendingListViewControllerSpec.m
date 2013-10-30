@@ -1,15 +1,15 @@
 #import <OCMock/OCMockObject.h>
 #import <OCMock/OCMArg.h>
-#import "TrendingListViewController.h"
+#import "TrendingTableViewController.h"
 #import "TrendingTableViewDataSource.h"
 #import "TrendingRepositories.h"
 #import "GithubSearchClient.h"
 
 SpecBegin(TrendingListViewController)
 
-    describe(@"TrendingListViewController", ^{
+    describe(@"TrendingTableViewController", ^{
 
-        __block TrendingListViewController *controller;
+        __block TrendingTableViewController *controller;
         __block TrendingRepositories *model;
         __block id apiClient;
 
@@ -17,7 +17,7 @@ SpecBegin(TrendingListViewController)
         beforeEach(^{
             model = [[TrendingRepositories alloc] init];
             apiClient = [OCMockObject niceMockForClass:[GithubSearchClient class]];
-            controller = [[TrendingListViewController alloc]initWithModel:model apiClient:apiClient];
+            controller = [[TrendingTableViewController alloc]initWithModel:model apiClient:apiClient];
 
         });
 
@@ -32,6 +32,11 @@ SpecBegin(TrendingListViewController)
                 [controller view];
                 expect(controller.tableView).toNot.beNil();
             });
+            
+            it(@"has a title", ^{
+                [controller view];
+                expect(controller.title).to.equal(@"Trending Repositories");
+            });
 
             describe(@"tableView dataSource", ^{
                 it(@"sets up the table view data source", ^{
@@ -42,7 +47,7 @@ SpecBegin(TrendingListViewController)
                 it(@"sets up the datasource with it's model", ^{
                     [controller view];
                     TrendingTableViewDataSource *dataSource = (TrendingTableViewDataSource *) controller.tableView.dataSource;
-                    expect(dataSource.repositories).toNot.beNil();
+                    expect(dataSource.repositories).to.equal(model);
                 });
             });
 

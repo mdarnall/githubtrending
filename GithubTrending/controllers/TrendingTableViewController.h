@@ -1,5 +1,5 @@
 //
-//  TrendingListViewController.h
+//  TrendingTableViewController.h
 //  GithubTrending
 //
 //  Created by Matt Darnall on 10/13/13.
@@ -11,7 +11,7 @@
 @class GithubSearchClient;
 @class TrendingRepositories;
 
-@interface TrendingListViewController : UITableViewController
+@interface TrendingTableViewController : UITableViewController
 
 
 - (id)initWithModel:(TrendingRepositories *)model apiClient:(GithubSearchClient *)apiClient;

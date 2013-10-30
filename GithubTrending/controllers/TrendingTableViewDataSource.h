@@ -2,8 +2,6 @@
 
 @class TrendingRepositories;
 
-
-
 @interface TrendingTableViewDataSource : NSObject <UITableViewDataSource>
 
 @property (strong, nonatomic) TrendingRepositories * repositories;

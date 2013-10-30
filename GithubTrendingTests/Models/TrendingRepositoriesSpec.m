@@ -21,7 +21,7 @@ SpecBegin(TrendingRepositories)
                 id mock = [OCMockObject partialMockForObject:[NSNotificationCenter defaultCenter]];
                 [[mock expect] postNotificationName:TrendingRepositoriesItemsChanged object:model];
 
-                model.items = @[];
+                model.items = @[@""];
 
                 [mock verify];
 

@@ -36,6 +36,4 @@ static NSString *const CellIdentifier = @"TrendingTableViewCell";
 }
 
 
-
-
 @end
