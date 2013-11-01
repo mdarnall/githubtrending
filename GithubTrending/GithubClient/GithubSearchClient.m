@@ -8,8 +8,14 @@
 #import "AFHTTPRequestOperation.h"
 #import "AFHTTPRequestOperationManager.h"
 
+@interface GithubSearchClient()
+
+@property (strong, nonatomic) NSDateFormatter * createdDateFormatter;
+
+@end
 
 @implementation GithubSearchClient
+
 
 + (GithubSearchClient *)sharedClient {
     static GithubSearchClient *_sharedClient = nil;
@@ -24,12 +30,13 @@
 
 - (void)getTrendingRepositories:(void (^)(NSArray *, NSError *))completedBlock {
 
+    NSDate * createdDate = [[NSDate alloc] init];
+    NSString *query = [NSString stringWithFormat:@"created:>%@", [self.createdDateFormatter stringFromDate:createdDate]];
 
     [self.requestSerializer setValue:@"application/vnd.github.preview" forHTTPHeaderField:@"Accept"];
 
-    [self
-            GET:@"/search/repositories"
-     parameters:@{@"q" : @"created:>2013-10-12", @"sort" : @"stars", @"order" : @"desc"}
+    [self GET:@"/search/repositories"
+     parameters:@{@"q": query, @"sort" : @"stars", @"order" : @"desc"}
         success:^(NSURLSessionDataTask *dataTask, id data) {
 
             NSArray *items = [data objectForKey:@"items"];
@@ -41,5 +48,15 @@
         }];
 
 }
+
+- (NSDateFormatter *)createdDateFormatter {
+    if(_createdDateFormatter == nil){
+        _createdDateFormatter = [[NSDateFormatter alloc] init];
+        [_createdDateFormatter setDateFormat:@"yyyy-MM-dd"];
+    }
+
+    return _createdDateFormatter;
+}
+
 
 @end
