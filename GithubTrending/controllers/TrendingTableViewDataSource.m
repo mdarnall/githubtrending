@@ -7,10 +7,6 @@ static NSString *const CellIdentifier = @"TrendingTableViewCell";
 @implementation TrendingTableViewDataSource
 
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.repositories.items.count;
 }

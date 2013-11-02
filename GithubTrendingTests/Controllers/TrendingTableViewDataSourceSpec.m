@@ -8,10 +8,12 @@ SpecBegin(TrendingTableViewDataSource)
 
         __block TrendingTableViewDataSource *dataSource;
 
-        describe(@"UITableViewDataSource", ^{
+        describe(@"UITableViewDataSource protocol", ^{
             
             beforeEach(^{
+                // create the model
                 TrendingRepositories *repositories = [[TrendingRepositories alloc] init];
+                // seed it with some known data
                 repositories.items = @[@{
                         @"full_name" : @"vhf/free-programming-books",
                         @"description" : @"foo"
@@ -29,15 +31,11 @@ SpecBegin(TrendingTableViewDataSource)
                 expect([dataSource conformsToProtocol:@protocol(UITableViewDataSource)]).to.beTruthy();
             });
 
-            it(@"should return one table section", ^{
-                expect([dataSource numberOfSectionsInTableView:nil]).to.equal(1);
-            });
-
             it(@"should return the number of rows based on the item count in the model", ^{
                 expect([dataSource tableView:nil numberOfRowsInSection:0]).to.equal(2);
             });
 
-            describe(@"cellForRowAtIndexPath", ^{
+            describe(@"tableView:cellForRowAtIndexPath", ^{
 
                 __block UITableViewCell *cell;
                 beforeEach(^{
@@ -49,12 +47,12 @@ SpecBegin(TrendingTableViewDataSource)
                     expect(cell).toNot.beNil();
                 });
 
-                it(@"should set the full name as the text label", ^{
+                it(@"should return a cell with the full name as the text label", ^{
                     NSString *fullName = [dataSource.repositories.items.firstObject objectForKey:@"full_name"];
                     expect(cell.textLabel.text).to.equal(fullName);
                 });
 
-                it(@"should set the description as the detail text label", ^{
+                it(@"should return a cell with the description as the detail text label", ^{
                     NSString *description = [dataSource.repositories.items.firstObject objectForKey:@"description"];
                     expect(cell.detailTextLabel.text).to.equal(description);
 
@@ -64,7 +62,6 @@ SpecBegin(TrendingTableViewDataSource)
         });
 
     });
-
 
 
 SpecEnd
