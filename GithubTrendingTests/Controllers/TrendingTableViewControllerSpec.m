@@ -5,7 +5,7 @@
 #import "TrendingRepositories.h"
 #import "GithubSearchClient.h"
 
-SpecBegin(TrendingListViewController)
+SpecBegin(TrendingTableViewController)
 
     describe(@"TrendingTableViewController", ^{
 
