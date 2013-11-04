@@ -24,41 +24,41 @@ SpecBegin(TrendingTableViewController)
 
         describe(@"view", ^{
 
+            __block UIView *view;
+
+            beforeEach(^{
+                view = [controller view];
+            });
+
             it(@"has a view outlet", ^{
-                UIView * view = [controller view];
                 expect(view).toNot.beNil();
             });
 
             it(@"has a tableview outlet", ^{
-                [controller view];
                 expect(controller.tableView).toNot.beNil();
             });
 
             it(@"has a menu outlet", ^{
-                [controller view] ;
                 expect(controller.menu).toNot.beNil();
             });
 
-            it(@"has a action for the navigation left bar button", ^{
-                [controller view];
+            it(@"creates an action for the navigation left bar button", ^{
+                // get a reference to to the left bar button
                 UIBarButtonItem *leftButton = controller.navigationItem.leftBarButtonItem;
-                expect([leftButton action]).to.equal(@selector(toggleMenu));               
-
-            });
-            
-            it(@"has a title", ^{
-                [controller view];
-                expect(controller.title).to.equal(@"Trending Repositories");
+                expect([leftButton action]).to.equal(@selector(toggleMenu));
             });
 
-            describe(@"tableView dataSource", ^{
+            describe(@"viewDidLoad initialization", ^{
+
+                it(@"initializes a title for the controller", ^{
+                    expect(controller.title).to.equal(@"Trending Repositories");
+                });
+
                 it(@"sets up the table view data source", ^{
-                    [controller view];
                     expect(controller.tableView.dataSource).to.beKindOf([TrendingTableViewDataSource class]);
                 });
 
                 it(@"sets up the datasource with it's model", ^{
-                    [controller view];
                     TrendingTableViewDataSource *dataSource = (TrendingTableViewDataSource *) controller.tableView.dataSource;
                     expect(dataSource.repositories).to.equal(model);
                 });
