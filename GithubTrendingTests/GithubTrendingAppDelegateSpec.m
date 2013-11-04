@@ -1,4 +1,3 @@
-
 #import "GithubTrendingAppDelegate.h"
 #import "TrendingTableViewController.h"
 
