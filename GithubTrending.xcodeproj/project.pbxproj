@@ -14,7 +14,7 @@
 		90CF4452857929314C527603 /* GithubSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF4276E6C26529017E5E18 /* GithubSearchClient.m */; };
 		90CF48BD4C0849CD0183A954 /* TrendingRepositoriesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF4CB7A9B3CBCFE6FD549D /* TrendingRepositoriesSpec.m */; };
 		90CF49533906A972C06366F2 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 90CF4FE686D931E865716743 /* podfile */; };
-		90CF49E2F5BCE82971DFFF57 /* TrendingListViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */; };
+		90CF49E2F5BCE82971DFFF57 /* TrendingTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF40A7B2B40D43671EFCDA /* TrendingTableViewControllerSpec.m */; };
 		90CF4D5BECB070C5EE8F07A3 /* TrendingTableViewDataSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF411B071FA56F2DCD3E4E /* TrendingTableViewDataSourceSpec.m */; };
 		90CF4DFBD12ADB0C18177111 /* GithubSearchClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF4A7574AC87221B22E4BA /* GithubSearchClientSpec.m */; };
 		AE09B8B6180A1F85000CD552 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B5180A1F85000CD552 /* Foundation.framework */; };
@@ -27,7 +27,7 @@
 		AE09B8D0180A1F85000CD552 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B5180A1F85000CD552 /* Foundation.framework */; };
 		AE09B8D1180A1F85000CD552 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B9180A1F85000CD552 /* UIKit.framework */; };
 		AE09B8D9180A1F85000CD552 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE09B8D7180A1F85000CD552 /* InfoPlist.strings */; };
-		AE09B8EB180A4A6F000CD552 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09B8EA180A4A6F000CD552 /* AppDelegateSpec.m */; };
+		AE09B8EB180A4A6F000CD552 /* GithubTrendingAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09B8EA180A4A6F000CD552 /* GithubTrendingAppDelegateSpec.m */; };
 		AE09B8EE180A4E9B000CD552 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */; };
 		AE0F2D5D180B55C000137054 /* TrendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0F2D5B180B55C000137054 /* TrendingTableViewController.m */; };
 		AE0F2D5E180B55C000137054 /* TrendingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2D5C180B55C000137054 /* TrendingTableViewController.xib */; };
@@ -50,7 +50,7 @@
 		142616CB7DB94EF1BD9FEAB1 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C170278D8CE405F9CC265A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		735ACBE99BE8465BB606436B /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = "<group>"; };
-		90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingListViewControllerSpec.m; path = Controllers/TrendingListViewControllerSpec.m; sourceTree = "<group>"; };
+		90CF40A7B2B40D43671EFCDA /* TrendingTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingTableViewControllerSpec.m; path = Controllers/TrendingTableViewControllerSpec.m; sourceTree = "<group>"; };
 		90CF40D7D26BF769521055FF /* OHHTTPStubs+GithubAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs+GithubAPI.h"; sourceTree = "<group>"; };
 		90CF411B071FA56F2DCD3E4E /* TrendingTableViewDataSourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingTableViewDataSourceSpec.m; path = Controllers/TrendingTableViewDataSourceSpec.m; sourceTree = "<group>"; };
 		90CF4276E6C26529017E5E18 /* GithubSearchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubSearchClient.m; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		AE09B8CD180A1F85000CD552 /* GithubTrendingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubTrendingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE09B8D6180A1F85000CD552 /* GithubTrendingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GithubTrendingTests-Info.plist"; sourceTree = "<group>"; };
 		AE09B8D8180A1F85000CD552 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AE09B8EA180A4A6F000CD552 /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
+		AE09B8EA180A4A6F000CD552 /* GithubTrendingAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubTrendingAppDelegateSpec.m; sourceTree = "<group>"; };
 		AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		AE09B8EF180B4B89000CD552 /* GithubTrendingTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GithubTrendingTests-Prefix.pch"; sourceTree = "<group>"; };
 		AE0F2D5A180B55C000137054 /* TrendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingTableViewController.h; path = GithubTrending/controllers/TrendingTableViewController.h; sourceTree = SOURCE_ROOT; };
@@ -115,7 +115,7 @@
 		90CF495460D458ED9FC6350C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				90CF40A7B2B40D43671EFCDA /* TrendingListViewControllerSpec.m */,
+				90CF40A7B2B40D43671EFCDA /* TrendingTableViewControllerSpec.m */,
 				90CF411B071FA56F2DCD3E4E /* TrendingTableViewDataSourceSpec.m */,
 			);
 			name = Controllers;
@@ -234,7 +234,7 @@
 			children = (
 				AEC4E3A4180F0B0A00F8EFC7 /* Resources */,
 				AE09B8D5180A1F85000CD552 /* Supporting Files */,
-				AE09B8EA180A4A6F000CD552 /* AppDelegateSpec.m */,
+				AE09B8EA180A4A6F000CD552 /* GithubTrendingAppDelegateSpec.m */,
 				90CF495460D458ED9FC6350C /* Controllers */,
 				90CF4FCA4BCB6C4C28AB9F59 /* GithubClient */,
 				90CF4E379671A1B5DFC6F1C7 /* Models */,
@@ -438,8 +438,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE09B8EB180A4A6F000CD552 /* AppDelegateSpec.m in Sources */,
-				90CF49E2F5BCE82971DFFF57 /* TrendingListViewControllerSpec.m in Sources */,
+				AE09B8EB180A4A6F000CD552 /* GithubTrendingAppDelegateSpec.m in Sources */,
+				90CF49E2F5BCE82971DFFF57 /* TrendingTableViewControllerSpec.m in Sources */,
 				90CF4D5BECB070C5EE8F07A3 /* TrendingTableViewDataSourceSpec.m in Sources */,
 				90CF4DFBD12ADB0C18177111 /* GithubSearchClientSpec.m in Sources */,
 				90CF400362443D953C16F23F /* OHHTTPStubs+GithubAPI.m in Sources */,
