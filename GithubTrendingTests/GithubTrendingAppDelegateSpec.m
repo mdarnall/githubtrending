@@ -24,8 +24,12 @@ describe(@"AppDelegate", ^{
         it(@"should set the root view controller", ^{
             expect(appDelegate.window.rootViewController).to.beKindOf([UINavigationController class]);
         });
-
         
+        it(@"should set the tableview controller as root controller in the navigation controller", ^{
+            UINavigationController * navigationController = (UINavigationController *) appDelegate.window.rootViewController;
+            NSArray *controllers = [navigationController viewControllers];
+            expect([controllers firstObject]).to.beKindOf([TrendingTableViewController class]);
+        });
         
     });
     
