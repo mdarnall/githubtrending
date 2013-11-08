@@ -102,7 +102,9 @@
 }
 
 - (void)fetchTrendingRepositories {
-    [self.apiClient getTrendingRepositories:^(NSArray *repositories, NSError *error) {
+
+    [self.apiClient getTrendingRepositories:self.model callBack:^(NSArray *repositories, NSError *error) {
+
         if (error) {
             NSLog(@"failed to load trending repositories %@", [error localizedDescription]);
         }

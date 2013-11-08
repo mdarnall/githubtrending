@@ -84,12 +84,13 @@ SpecBegin(TrendingTableViewController)
 
             });
 
-            it(@"should load and set the initial model data", ^{
+            it(@"should set the initial model data", ^{
 
+                // set our initial state
                 model.items = @[];
 
                 // stub the call to getTrendingRepositories in the APIClient
-                [[apiClient stub] getTrendingRepositories:[OCMArg checkWithBlock:^BOOL(id param){
+                [[apiClient stub] getTrendingRepositories:[OCMArg any] callBack:[OCMArg checkWithBlock:^BOOL(id param) {
                     void (^passedBlock)(NSArray *, NSError *) = param;
                     passedBlock(@[@"", @""], nil);
                     return YES;

@@ -7,6 +7,7 @@
 #import "GithubSearchClient.h"
 #import "AFHTTPRequestOperation.h"
 #import "AFHTTPRequestOperationManager.h"
+#import "TrendingRepositories.h"
 
 @interface GithubSearchClient()
 
@@ -28,10 +29,11 @@
     return _sharedClient;
 }
 
-- (void)getTrendingRepositories:(void (^)(NSArray *, NSError *))completedBlock {
+- (void)getTrendingRepositories:(TrendingRepositories* )model callBack:(void (^)(NSArray *, NSError *))callBack {
 
-    NSDate * createdDate = [[NSDate alloc] init];
-    NSString *query = [NSString stringWithFormat:@"created:>%@", [self.createdDateFormatter stringFromDate:createdDate]];
+
+    NSString *query = [NSString stringWithFormat:@"created:>%@",
+                    [self.createdDateFormatter stringFromDate:model.createdDateFilter]];
 
     [self.requestSerializer setValue:@"application/vnd.github.preview" forHTTPHeaderField:@"Accept"];
 
@@ -40,11 +42,11 @@
         success:^(NSURLSessionDataTask *dataTask, id data) {
 
             NSArray *items = [data objectForKey:@"items"];
-            completedBlock([items subarrayWithRange:NSMakeRange(0, 10)], nil);
+            callBack([items subarrayWithRange:NSMakeRange(0, 20)], nil);
 
         }
         failure:^(NSURLSessionDataTask *dataTask, NSError *error) {
-            completedBlock(nil, error);
+            callBack(nil, error);
         }];
 
 }

@@ -9,12 +9,14 @@
 #import "AFNetworking.h"
 #import "AFHTTPSessionManager.h"
 
+@class TrendingRepositories;
+
 
 @interface GithubSearchClient : AFHTTPSessionManager
 
 + (GithubSearchClient *) sharedClient;
 
-- (void)getTrendingRepositories:(void (^)(NSArray *, NSError *))completedBlock;
+- (void)getTrendingRepositories:(TrendingRepositories *)model callBack:(void (^)(NSArray *, NSError *))callBack;
 
 
 @end
