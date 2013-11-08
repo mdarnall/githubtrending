@@ -3,13 +3,14 @@
 #import "TrendingTableViewDataSource.h"
 #import "GithubSearchClient.h"
 #import "TrendingRepositories.h"
-#import "REMenu.h"
 
 @interface TrendingTableViewController ()
 
 @property(strong, nonatomic) TrendingTableViewDataSource *dataSource;
 @property(strong, nonatomic) GithubSearchClient *apiClient;
 @property(strong, nonatomic) TrendingRepositories *model;
+
+
 
 @end
 
@@ -50,12 +51,14 @@
                                                                             target:self
                                                                             action:@selector(toggleMenu)];
 
+    __typeof (self) __weak weakSelf = self;
     REMenuItem *todayItem = [[REMenuItem alloc] initWithTitle:@"Today"
                                                     subtitle:nil
                                                        image:nil
                                             highlightedImage:nil
-                                                      action:^(REMenuItem *item) {
-                                                          NSLog(@"Item: %@", item);
+                                                      action:^(REMenuItem *item){
+                                                          weakSelf.model.timeframe = TrendingDaily;
+                                                          [weakSelf onTimeframeChanged];
                                                       }];
 
     REMenuItem *thisWeek = [[REMenuItem alloc] initWithTitle:@"This Week"
@@ -63,7 +66,8 @@
                                                         image:nil
                                              highlightedImage:nil
                                                        action:^(REMenuItem *item) {
-                                                           NSLog(@"Item: %@", item);
+                                                            weakSelf.model.timeframe = TrendingWeekly;
+                                                           [weakSelf onTimeframeChanged];
                                                        }];
 
     REMenuItem *thisMonth = [[REMenuItem alloc] initWithTitle:@"This Month"
@@ -71,11 +75,17 @@
                                                         image:nil
                                              highlightedImage:nil
                                                        action:^(REMenuItem *item) {
-                                                           NSLog(@"Item: %@", item);
+                                                           weakSelf.model.timeframe = TrendingMonthly;
+                                                           [weakSelf onTimeframeChanged];
                                                        }];
 
 
     self.menu = [[REMenu alloc] initWithItems:@[todayItem, thisWeek, thisMonth]];
+
+}
+
+- (void)onTimeframeChanged {
+    [self fetchTrendingRepositories];
 
 }
 
@@ -90,7 +100,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    // listen to the model to say it got new items and update the tableview
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(onTrendingRepositoriesChanged)
                                                  name:TrendingRepositoriesItemsChanged
@@ -112,14 +121,10 @@
         self.model.items = repositories;
     }];
 
-
 }
 
 - (void)onTrendingRepositoriesChanged {
-
-    NSLog(@"Model state: %@", self.model.items);
     [self.tableView reloadData];
-
 }
 
 - (TrendingTableViewDataSource *)dataSource {

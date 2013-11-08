@@ -20,4 +20,5 @@
 
 - (id)initWithModel:(TrendingRepositories *)model apiClient:(GithubSearchClient *)apiClient;
 
+- (void)onTimeframeChanged;
 @end
