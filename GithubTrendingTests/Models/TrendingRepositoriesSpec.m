@@ -11,6 +11,44 @@ SpecBegin(TrendingRepositories)
 
         beforeEach(^{
             model = [[TrendingRepositories alloc] init];
+        });
+
+        describe(@"TrendingTimeframe", ^{
+
+            __block NSDate *today;
+            beforeAll(^{
+                today = [NSDate new];
+            });
+
+            context(@"Trending Daily", ^{
+
+                it(@"should return the right date", ^{
+                    model.timeframe = TrendingDaily;
+                    expect([model.createdDateFilter timeIntervalSinceDate:today]).to.beLessThan(1);
+                });
+            });
+
+            context(@"Trending Weekly", ^{
+
+                it(@"should return a date a week ago as the createdDateFilter", ^{
+                    model.timeframe = TrendingWeekly;
+                    NSDate *aWeekAgo = [today dateByAddingTimeInterval:-604800];
+
+                    expect([model.createdDateFilter timeIntervalSinceDate:aWeekAgo]).to.beLessThan(1);
+                });
+
+            });
+
+            context(@"Trending Monthly", ^{
+
+                it(@"should return last month as the createdDateFilter", ^{
+                    model.timeframe = TrendingMonthly;
+                    NSDate * lastMonth = [today dateByAddingTimeInterval:-2.63e+6];
+
+                    expect([model.createdDateFilter timeIntervalSinceDate:lastMonth]).to.beLessThan(1);
+                });
+
+            });
 
         });
 
@@ -43,6 +81,7 @@ SpecBegin(TrendingRepositories)
 
             });
         });
+
     });
 
 SpecEnd
