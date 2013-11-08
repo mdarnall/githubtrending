@@ -46,10 +46,22 @@
 
 - (void)createMenu {
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
-                                                                             style:UIBarButtonItemStyleBordered
-                                                                            target:self
-                                                                            action:@selector(toggleMenu)];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
+//                                                                             style:UIBarButtonItemStyleBordered
+//                                                                            target:self
+//                                                                            action:@selector(toggleMenu)];
+
+    id item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks
+                                                  target: self
+                                                  action:@selector(toggleMenu)];
+
+
+//    id item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"clock_03"]
+//                                               style: UIBarButtonItemStyleBordered
+//                                              target:self
+//                                              action:@selector(toggleMenu)];
+
+    self.navigationItem.rightBarButtonItem = item;
 
     __typeof (self) __weak weakSelf = self;
     REMenuItem *todayItem = [[REMenuItem alloc] initWithTitle:@"Today"
