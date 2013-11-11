@@ -23,7 +23,7 @@ PODS:
   - OCMock (2.2.1)
   - OHHTTPStubs (3.0.2)
   - REMenu (1.5.1)
-  - Specta (0.1.11)
+  - Specta (0.2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -31,7 +31,7 @@ DEPENDENCIES:
   - OCMock (~> 2.2.1)
   - OHHTTPStubs (~> 3.0.1)
   - REMenu (~> 1.5.1)
-  - Specta (~> 0.1.11)
+  - Specta (~> 0.2.1)
 
 SPEC CHECKSUMS:
   AFNetworking: a6f11ac4ac087303e6ff87adc1ba57b0dac20ef8
@@ -39,6 +39,6 @@ SPEC CHECKSUMS:
   OCMock: 80e4cfbc71a0e1bd28caf10a9fda27da7c4c8402
   OHHTTPStubs: 7be864a1c40c6a5007fe3e8679c109ca45590803
   REMenu: 52875a085a4983c2daaceb21a0f4e9c42365d5db
-  Specta: 82746c6fd70b104c5d37cfbadb7bf15a2cbc4da0
+  Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
 
 COCOAPODS: 0.27.1

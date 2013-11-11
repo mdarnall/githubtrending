@@ -28,7 +28,6 @@
 		AE09B8D1180A1F85000CD552 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8B9180A1F85000CD552 /* UIKit.framework */; };
 		AE09B8D9180A1F85000CD552 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE09B8D7180A1F85000CD552 /* InfoPlist.strings */; };
 		AE09B8EB180A4A6F000CD552 /* GithubTrendingAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09B8EA180A4A6F000CD552 /* GithubTrendingAppDelegateSpec.m */; };
-		AE09B8EE180A4E9B000CD552 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */; };
 		AE0F2D5D180B55C000137054 /* TrendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0F2D5B180B55C000137054 /* TrendingTableViewController.m */; };
 		AE0F2D5E180B55C000137054 /* TrendingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2D5C180B55C000137054 /* TrendingTableViewController.xib */; };
 		AE922BC2180B673100CA66FD /* TrendingTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE922BC1180B673100CA66FD /* TrendingTableViewDataSource.m */; };
@@ -72,11 +71,10 @@
 		AE09B8C4180A1F85000CD552 /* GithubTrendingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubTrendingAppDelegate.h; sourceTree = "<group>"; };
 		AE09B8C5180A1F85000CD552 /* GithubTrendingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubTrendingAppDelegate.m; sourceTree = "<group>"; };
 		AE09B8C7180A1F85000CD552 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AE09B8CD180A1F85000CD552 /* GithubTrendingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubTrendingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE09B8CD180A1F85000CD552 /* GithubTrendingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubTrendingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE09B8D6180A1F85000CD552 /* GithubTrendingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GithubTrendingTests-Info.plist"; sourceTree = "<group>"; };
 		AE09B8D8180A1F85000CD552 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE09B8EA180A4A6F000CD552 /* GithubTrendingAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubTrendingAppDelegateSpec.m; sourceTree = "<group>"; };
-		AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		AE09B8EF180B4B89000CD552 /* GithubTrendingTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GithubTrendingTests-Prefix.pch"; sourceTree = "<group>"; };
 		AE0F2D5A180B55C000137054 /* TrendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrendingTableViewController.h; path = GithubTrending/controllers/TrendingTableViewController.h; sourceTree = SOURCE_ROOT; };
 		AE0F2D5B180B55C000137054 /* TrendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrendingTableViewController.m; path = GithubTrending/controllers/TrendingTableViewController.m; sourceTree = SOURCE_ROOT; };
@@ -102,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE09B8EE180A4E9B000CD552 /* SenTestingKit.framework in Frameworks */,
 				AE09B8D1180A1F85000CD552 /* UIKit.framework in Frameworks */,
 				AE09B8D0180A1F85000CD552 /* Foundation.framework in Frameworks */,
 				0C4233DFD2B94AC4B37B85A7 /* libPods-test.a in Frameworks */,
@@ -186,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				AE09B8B2180A1F85000CD552 /* GithubTrending.app */,
-				AE09B8CD180A1F85000CD552 /* GithubTrendingTests.octest */,
+				AE09B8CD180A1F85000CD552 /* GithubTrendingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,7 +191,6 @@
 		AE09B8B4180A1F85000CD552 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AE09B8EC180A4D7A000CD552 /* SenTestingKit.framework */,
 				AE09B8B5180A1F85000CD552 /* Foundation.framework */,
 				AE09B8B7180A1F85000CD552 /* CoreGraphics.framework */,
 				AE09B8B9180A1F85000CD552 /* UIKit.framework */,
@@ -299,7 +295,7 @@
 			);
 			name = GithubTrendingTests;
 			productName = GithubTrendingTests;
-			productReference = AE09B8CD180A1F85000CD552 /* GithubTrendingTests.octest */;
+			productReference = AE09B8CD180A1F85000CD552 /* GithubTrendingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -312,7 +308,7 @@
 				ORGANIZATIONNAME = "Matt Darnall";
 				TargetAttributes = {
 					AE09B8CC180A1F85000CD552 = {
-						TestTargetID = AE09B8B1180A1F85000CD552 /* GithubTrending */;
+						TestTargetID = AE09B8B1180A1F85000CD552;
 					};
 				};
 			};
@@ -609,7 +605,6 @@
 				INFOPLIST_FILE = "GithubTrendingTests/GithubTrendingTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -629,7 +624,6 @@
 				INFOPLIST_FILE = "GithubTrendingTests/GithubTrendingTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

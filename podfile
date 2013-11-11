@@ -6,7 +6,7 @@ pod 'REMenu', '~> 1.5.1'
 target :test do
   link_with 'GithubTrendingTests'
 
-  pod 'Specta', '~> 0.1.11'
+  pod 'Specta', '~> 0.2.1'
   pod 'Expecta', '~> 0.2.2'
   pod 'OCMock', '~> 2.2.1'
   pod 'OHHTTPStubs', '~> 3.0.1'
