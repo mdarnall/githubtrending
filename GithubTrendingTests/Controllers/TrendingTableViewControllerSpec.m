@@ -44,8 +44,8 @@ SpecBegin(TrendingTableViewController)
 
             it(@"creates an action for the navigation left bar button", ^{
                 // get a reference to to the left bar button
-                UIBarButtonItem *leftButton = controller.navigationItem.leftBarButtonItem;
-                expect([leftButton action]).to.equal(@selector(toggleMenu));
+                UIBarButtonItem *rightBarButtonItem = controller.navigationItem.rightBarButtonItem;
+                expect([rightBarButtonItem action]).to.equal(@selector(toggleMenu));
             });
 
             describe(@"viewDidLoad initialization", ^{
