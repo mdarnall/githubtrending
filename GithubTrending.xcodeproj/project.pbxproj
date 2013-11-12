@@ -308,7 +308,7 @@
 				ORGANIZATIONNAME = "Matt Darnall";
 				TargetAttributes = {
 					AE09B8CC180A1F85000CD552 = {
-						TestTargetID = AE09B8B1180A1F85000CD552;
+						TestTargetID = AE09B8B1180A1F85000CD552 /* GithubTrending */;
 					};
 				};
 			};

@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE09B8CC180A1F85000CD552"
-               BuildableName = "GithubTrendingTests.octest"
+               BuildableName = "GithubTrendingTests.xctest"
                BlueprintName = "GithubTrendingTests"
                ReferencedContainer = "container:GithubTrending.xcodeproj">
             </BuildableReference>
