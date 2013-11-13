@@ -15,10 +15,11 @@
 @interface TrendingTableViewController : UITableViewController
 
 @property(strong, nonatomic) REMenu * menu;
+@property(strong, nonatomic) TrendingRepositories *model;
 
 - (void)toggleMenu;
 
-- (id)initWithModel:(TrendingRepositories *)model apiClient:(GithubSearchClient *)apiClient;
+- (id)initWithApiClient:(GithubSearchClient *)apiClient;
 
 - (void)onTimeframeChanged;
 @end

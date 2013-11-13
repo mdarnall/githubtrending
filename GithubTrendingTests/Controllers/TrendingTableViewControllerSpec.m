@@ -11,15 +11,13 @@ SpecBegin(TrendingTableViewController)
     describe(@"TrendingTableViewController", ^{
 
         __block TrendingTableViewController *objectUnderTest;
-        __block UINavigationController *navigationController;
-        __block TrendingRepositories *model;
+        __block UINavigationController  __unused *navigationController;
         __block id apiClient;
 
 
         beforeEach(^{
-            model = [[TrendingRepositories alloc] init];
             apiClient = [OCMockObject niceMockForClass:[GithubSearchClient class]];
-            objectUnderTest = [[TrendingTableViewController alloc]initWithModel:model apiClient:apiClient];
+            objectUnderTest = [[TrendingTableViewController alloc] initWithApiClient:apiClient];
             navigationController = [[UINavigationController alloc] initWithRootViewController:objectUnderTest];
         });
 
@@ -70,7 +68,9 @@ SpecBegin(TrendingTableViewController)
 
                 it(@"sets up the datasource with it's model", ^{
                     TrendingTableViewDataSource *dataSource = (TrendingTableViewDataSource *) objectUnderTest.tableView.dataSource;
-                    expect(dataSource.repositories).to.equal(model);
+                    TrendingRepositories * expectedModel = objectUnderTest.model;
+
+                    expect(dataSource.repositories).to.equal(expectedModel);
                 });
             });
 
@@ -85,7 +85,7 @@ SpecBegin(TrendingTableViewController)
                 [[aMock expect] addObserver:objectUnderTest
                                    selector:[OCMArg anySelector]
                                        name:TrendingRepositoriesItemsChanged
-                                     object:model];
+                                     object:objectUnderTest.model];
 
                 [objectUnderTest viewWillAppear:YES];
 
@@ -97,7 +97,7 @@ SpecBegin(TrendingTableViewController)
             it(@"should set the initial model data", ^{
 
                 // set our initial state
-                model.items = @[];
+                objectUnderTest.model.items = @[];
 
                 // stub the call to getTrendingRepositories in the APIClient
                 [[apiClient stub] getTrendingRepositories:[OCMArg any] callBack:[OCMArg checkWithBlock:^BOOL(id param) {
@@ -108,7 +108,7 @@ SpecBegin(TrendingTableViewController)
 
                 [objectUnderTest viewWillAppear:YES];
 
-                expect(model.items).to.haveCountOf(2);
+                expect(objectUnderTest.model.items).to.haveCountOf(2);
 
             });
 

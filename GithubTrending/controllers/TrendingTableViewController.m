@@ -8,8 +8,6 @@
 
 @property(strong, nonatomic) TrendingTableViewDataSource *dataSource;
 @property(strong, nonatomic) GithubSearchClient *apiClient;
-@property(strong, nonatomic) TrendingRepositories *model;
-
 
 
 @end
@@ -17,18 +15,17 @@
 @implementation TrendingTableViewController
 
 - (id)init {
-    TrendingRepositories *model = [[TrendingRepositories alloc] init];
     GithubSearchClient *apiClient = [GithubSearchClient sharedClient];
 
-    return [self initWithModel:model apiClient:apiClient];
+    return [self initWithApiClient:apiClient];
 }
 
 // di initializer for testing
-- (id)initWithModel:(TrendingRepositories *)model apiClient:(GithubSearchClient *)apiClient {
+- (id)initWithApiClient:(GithubSearchClient *)apiClient {
 
     self = [super init];
     if (self) {
-        _model = model;
+        _model = [[TrendingRepositories alloc] init];
         _apiClient = apiClient;
     }
     return self;
