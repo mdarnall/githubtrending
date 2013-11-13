@@ -1,5 +1,6 @@
 #import <OCMock/OCMockObject.h>
 #import <OCMock/OCMArg.h>
+#import <REMenu/REMenu.h>
 #import "TrendingTableViewController.h"
 #import "TrendingTableViewDataSource.h"
 #import "TrendingRepositories.h"
@@ -9,7 +10,7 @@ SpecBegin(TrendingTableViewController)
 
     describe(@"TrendingTableViewController", ^{
 
-        __block TrendingTableViewController *controller;
+        __block TrendingTableViewController *objectUnderTest;
         __block UINavigationController *navigationController;
         __block TrendingRepositories *model;
         __block id apiClient;
@@ -18,8 +19,8 @@ SpecBegin(TrendingTableViewController)
         beforeEach(^{
             model = [[TrendingRepositories alloc] init];
             apiClient = [OCMockObject niceMockForClass:[GithubSearchClient class]];
-            controller = [[TrendingTableViewController alloc]initWithModel:model apiClient:apiClient];
-            navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+            objectUnderTest = [[TrendingTableViewController alloc]initWithModel:model apiClient:apiClient];
+            navigationController = [[UINavigationController alloc] initWithRootViewController:objectUnderTest];
         });
 
         describe(@"view", ^{
@@ -27,7 +28,7 @@ SpecBegin(TrendingTableViewController)
             __block UIView *view;
 
             beforeEach(^{
-                view = [controller view];
+                view = [objectUnderTest view];
             });
 
             it(@"has a view outlet", ^{
@@ -35,31 +36,40 @@ SpecBegin(TrendingTableViewController)
             });
 
             it(@"has a tableview outlet", ^{
-                expect(controller.tableView).toNot.beNil();
+                expect(objectUnderTest.tableView).toNot.beNil();
             });
 
             it(@"has a menu outlet", ^{
-                expect(controller.menu).toNot.beNil();
+                expect(objectUnderTest.menu).toNot.beNil();
+            });
+
+            it(@"has a rightBarButtonItem", ^{
+                expect(objectUnderTest.navigationItem.rightBarButtonItem).toNot.beNil();
             });
 
             it(@"creates an action for the navigation left bar button", ^{
                 // get a reference to to the left bar button
-                UIBarButtonItem *rightBarButtonItem = controller.navigationItem.rightBarButtonItem;
+                UIBarButtonItem *rightBarButtonItem = objectUnderTest.navigationItem.rightBarButtonItem;
                 expect([rightBarButtonItem action]).to.equal(@selector(toggleMenu));
+            });
+
+            it(@"toggles the menu open", ^{
+                [objectUnderTest toggleMenu];
+                expect(objectUnderTest.menu.isOpen).to.beTruthy();
             });
 
             describe(@"viewDidLoad initialization", ^{
 
                 it(@"initializes a title for the controller", ^{
-                    expect(controller.title).to.equal(@"Trending Repositories");
+                    expect(objectUnderTest.title).to.equal(@"Trending Repositories");
                 });
 
                 it(@"sets up the table view data source", ^{
-                    expect(controller.tableView.dataSource).to.beKindOf([TrendingTableViewDataSource class]);
+                    expect(objectUnderTest.tableView.dataSource).to.beKindOf([TrendingTableViewDataSource class]);
                 });
 
                 it(@"sets up the datasource with it's model", ^{
-                    TrendingTableViewDataSource *dataSource = (TrendingTableViewDataSource *) controller.tableView.dataSource;
+                    TrendingTableViewDataSource *dataSource = (TrendingTableViewDataSource *) objectUnderTest.tableView.dataSource;
                     expect(dataSource.repositories).to.equal(model);
                 });
             });
@@ -72,12 +82,12 @@ SpecBegin(TrendingTableViewController)
 
                 id aMock = [OCMockObject partialMockForObject:[NSNotificationCenter defaultCenter]];
 
-                [[aMock expect] addObserver:controller
+                [[aMock expect] addObserver:objectUnderTest
                                    selector:[OCMArg anySelector]
                                        name:TrendingRepositoriesItemsChanged
                                      object:model];
 
-                [controller viewWillAppear:YES];
+                [objectUnderTest viewWillAppear:YES];
 
                 [aMock verify];
                 [aMock stopMocking];
@@ -96,7 +106,7 @@ SpecBegin(TrendingTableViewController)
                     return YES;
                 }]];
 
-                [controller viewWillAppear:YES];
+                [objectUnderTest viewWillAppear:YES];
 
                 expect(model.items).to.haveCountOf(2);
 
