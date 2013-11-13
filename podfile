@@ -3,7 +3,7 @@ platform :ios, '7.0'
 pod "AFNetworking", "~> 2.0"
 pod 'REMenu', '~> 1.5.1'
 
-target :test do
+target :test, :exclusive => true do
   link_with 'GithubTrendingTests'
 
   pod 'Specta', '~> 0.2.1'
