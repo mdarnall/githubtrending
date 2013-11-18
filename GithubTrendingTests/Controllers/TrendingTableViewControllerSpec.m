@@ -14,7 +14,6 @@ SpecBegin(TrendingTableViewController)
         __block UINavigationController  __unused *navigationController;
         __block id apiClient;
 
-
         beforeEach(^{
             apiClient = [OCMockObject niceMockForClass:[GithubSearchClient class]];
             objectUnderTest = [[TrendingTableViewController alloc] initWithApiClient:apiClient];
@@ -93,15 +92,17 @@ SpecBegin(TrendingTableViewController)
                 [aMock stopMocking];
 
             });
-
+            
             it(@"should set the initial model data", ^{
 
                 // set our initial state
                 objectUnderTest.model.items = @[];
 
                 // stub the call to getTrendingRepositories in the APIClient
-                [[apiClient stub] getTrendingRepositories:[OCMArg any] callBack:[OCMArg checkWithBlock:^BOOL(id param) {
+                [[apiClient stub] getTrendingRepositories:[OCMArg any]
+                                                 callBack:[OCMArg checkWithBlock:^BOOL(id param) {
                     void (^passedBlock)(NSArray *, NSError *) = param;
+                    // call the callback as a success with 2 items
                     passedBlock(@[@"", @""], nil);
                     return YES;
                 }]];
